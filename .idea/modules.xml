@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Learning ArrayList.iml" filepath="$PROJECT_DIR$/Learning ArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Learning_ArrayList/Learning_ArrayList.iml" filepath="$PROJECT_DIR$/Learning_ArrayList/Learning_ArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Learning_LinkedList/Learning_LinkedList.iml" filepath="$PROJECT_DIR$/Learning_LinkedList/Learning_LinkedList.iml" />
     </modules>
   </component>
 </project>
