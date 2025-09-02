@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.logging.StreamHandler;
@@ -52,26 +53,56 @@ public class Main {
 //
 //        Use a LinkedList<String> as a queue of customers.
 
-        LinkedList<String> customers=new LinkedList<>();
-        System.out.print("Add the customers in the Queue : " );
+//        LinkedList<String> customers=new LinkedList<>();
+//        System.out.print("Add the customers in the Queue : " );
+//        Scanner scanner=new Scanner(System.in);
+//        int i=0;
+//        while(i<5){
+//            customers.offer(scanner.nextLine());
+//            i++;
+//        }
+//
+//        System.out.print("5 Customers are added in the the queue Type Y/N to proceed checkout: ");
+//        String s=scanner.nextLine();
+//        if(s.equalsIgnoreCase("Y")){
+//            String customer;
+//            while ((customer=customers.pollFirst())!=null){
+//                System.out.println("Bank is serving : "+customer);
+//                try{Thread.sleep(3000);}catch (InterruptedException e){};
+//            }
+//        }else{
+//            System.out.println("Bank System is closed...Thanks for using the App...!");
+//        }
+//        System.out.println("Thanks for using the App...!");
+
+
+        System.out.println("Welcome to to the application checking if the String is palindrome...!");
+        System.out.print("Type your string : ");
         Scanner scanner=new Scanner(System.in);
-        int i=0;
-        while(i<5){
-            customers.offer(scanner.nextLine());
-            i++;
+        String s=scanner.nextLine();
+        LinkedList<Character> charList=new LinkedList<>();
+        for(int i=0;i<s.length();i++){
+            charList.offer(s.charAt(i));
         }
 
-        System.out.print("5 Customers are added in the the queue Type Y/N to proceed checkout: ");
-        String s=scanner.nextLine();
-        if(s.equalsIgnoreCase("Y")){
-            String customer;
-            while ((customer=customers.pollFirst())!=null){
-                System.out.println("Bank is serving : "+customer);
-                try{Thread.sleep(3000);}catch (InterruptedException e){};
+        boolean result=true;
+        do{
+            if(charList.peekLast()==charList.peekFirst()){
+                charList.pollFirst();
+                charList.pollLast();
+            }else{
+                result =false;
+                break;
             }
+
+        }while (charList.peekLast()!=charList.peekFirst());
+
+        if(result==true){
+            System.out.println("String is palindrome ...!");
         }else{
-            System.out.println("Bank System is closed...Thanks for using the App...!");
+            System.out.println("String is not palindrome...!");
         }
-        System.out.println("Thanks for using the App...!");
+
+
     }
 }
